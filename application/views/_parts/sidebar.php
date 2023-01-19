@@ -19,7 +19,7 @@
 							<li>
 								<a href="<?= site_url('admin/hotel') ?>" class="waves-effect">
 									<i class="mdi mdi-map-marker-radius-outline mdi-18px"></i>
-									<span>Data Petshop</span>
+									<span>Pie Pisang</span>
 								</a>
 							</li>
 							<li>
@@ -56,7 +56,7 @@
 							<li>
 								<a href="<?= site_url('hotel') ?>" class="waves-effect">
 									<i class="mdi mdi-map-marker-radius-outline mdi-18px"></i>
-									<span>Daftar Petshop</span>
+									<span>Pie Pisang</span>
 								</a>
 							</li>
 							<li>
@@ -71,7 +71,7 @@
 									<span>Pencarian Rute</span>
 								</a>
 							</li>
-							
+
 							<li>
 								<a href="<?= site_url('about') ?>" class="waves-effect">
 									<i class="mdi mdi-information-outline mdi-18px"></i>

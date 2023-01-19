@@ -32,12 +32,12 @@
 								<div class="card">
 									<div class="card-body">
 										<div class="p-0">
-											<p>Berikut adalah form data petshop. silahkan lengkapi data-data dibawah ini dengan lengkap dan benar</p>
+											<p>Berikut adalah form data Toko Oleh-Oleh. silahkan lengkapi data-data dibawah ini dengan lengkap dan benar</p>
 											<hr />
 											<form action="<?= site_url('admin/hotel/edit/' . $rsRow->id) ?>" method="POST" enctype="multipart/form-data">
 												<input type="hidden" name="id" value="<?= $rsRow->id ?>">
 												<div class="form-group">
-													<label>Petshop</label>
+													<label>Toko Oleh-Oleh</label>
 													<input type="text" name="name" class="form-control" value="<?= $rsRow->name ?>">
 													<?= form_error('name') ?>
 												</div>
@@ -59,7 +59,7 @@
 												</div>
 
 												<div class="form-group mt-2">
-													<label>Image</label>
+													<label>Foto Toko</label>
 													<input type="file" name="userfile">
 													<br />
 													<input type="hidden" name="old_picture" value="<?= $rsRow->picture ?>">

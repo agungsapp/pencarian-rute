@@ -25,6 +25,8 @@ class NodeModel extends CI_Model
 	{
 		$this->db->insert($this->tb_, array(
 			'name' => $_POST['name'],
+			//kategori
+			'kategori' => $_POST['kategori'],
 			'lat' => $_POST['lat'],
 			'lng' => $_POST['lng'],
 			'desc' => $_POST['desc'],

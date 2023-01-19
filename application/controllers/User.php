@@ -39,7 +39,7 @@ class User extends CI_Controller
 
 		$this->form_validation->set_rules('username', 'Username', 'required', ['required' => '%s tidak boleh kosong ']);
 		$this->form_validation->set_rules('password', 'Password', 'required', ['required' => '%s tidak boleh kosong ']);
-
+		$this->form_validation->set_rules('rule', 'rule', 'required', ['required' => '%s tidak boleh kosong ']);
 
 		if ($this->form_validation->run() == TRUE) {
 			$this->UserModel->add();
@@ -63,7 +63,7 @@ class User extends CI_Controller
 
 		$this->form_validation->set_rules('username', 'Username', 'required', ['required' => '%s tidak boleh kosong ']);
 		$this->form_validation->set_rules('password', 'Password', 'required', ['required' => '%s tidak boleh kosong ']);
-
+		$this->form_validation->set_rules('rule', 'rule', 'required', ['required' => '%s tidak boleh kosong ']);
 		if ($this->form_validation->run() == TRUE) {
 			$this->UserModel->edit();
 			$this->session->set_flashdata('statusMessage', alert('success', 'Data User berhasil diperbarui'));
@@ -111,7 +111,7 @@ class User extends CI_Controller
 	public function ajaxlist()
 	{
 		$datatables = new Datatables(new CodeigniterAdapter);
-		$datatables->query('SELECT id,username,password,inserted_at FROM user');
+		$datatables->query('SELECT id,username,rule,password,inserted_at FROM user');
 		$datatables->hide('id');
 		$datatables->add('aksi', function ($data) {
 			return '<a href="' . site_url('admin/user/edit/' . $data['id']) . '" class="btn btn-primary"><i class="dripicons-document-edit"></i></a>&nbsp;<a href="#" onclick="deleteData(' . $data['id'] . ')" class="btn btn-danger"><i class="dripicons-trash"></i></a>';

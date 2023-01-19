@@ -41,6 +41,11 @@
 													<?= form_error('username') ?>
 												</div>
 												<div class="form-group">
+													<label>Rule</label><br><small>admin/user</small>
+													<input type="text" name="rule" class="form-control" value="<?= set_value('rule') ?>">
+													<?= form_error('rule') ?>
+												</div>
+												<div class="form-group">
 													<label>password</label>
 													<input type="text" name="password" class="form-control" value="<?= set_value('password') ?>">
 													<?= form_error('password') ?>

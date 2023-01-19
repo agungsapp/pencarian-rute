@@ -5,6 +5,7 @@ $route['login'] = 'Login/index';
 $route['logout'] = 'Logout/logout';
 #admin
 $route['admin/dashboard'] = 'Dashboard';
+$route['admin/dashboard/detail/(:num)'] = 'Dashboard/detail/$1';
 $route['admin/hotel'] = 'Objects';
 $route['admin/hotel/add'] = 'Objects/add';
 $route['admin/hotel/edit/(:num)'] = 'Objects/edit/$1';

@@ -9,12 +9,7 @@ class Admin_Dashboard extends CI_Controller
 	 * menampilkan halaman dashboard
 	 * @return void
 	 */
-	public function __construct()
-	{
-		if ($this->session->userdata('user') === null {
-			redirect('login');
-		}
-	}
+	
 	public function index()
 	{
 		$this->load->model('NodeModel');

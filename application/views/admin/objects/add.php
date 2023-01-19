@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 
@@ -25,23 +27,43 @@
 					<div class="page-content-wrapper">
 						<div class="mt-3">
 
-							<h3 class=""><strong>Tambah  Petshop </strong></h3>
+							<h3 class=""><strong>Tambah Toko </strong></h3>
 						</div>
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="card">
 									<div class="card-body">
 										<div class="p-0">
-											<p>Berikut adalah form data Petshop. silahkan lengkapi data-data dibawah ini dengan lengkap dan benar</p>
+											<p>Berikut adalah form data Toko Oleh-Oleh. silahkan lengkapi data-data dibawah ini dengan lengkap dan benar</p>
 											<hr />
+
 											<form action="<?= site_url('admin/hotel/add') ?>" method="POST" enctype="multipart/form-data">
+
 												<div class="form-group">
-													<label>Nama Petshop</label>
+													<label>Nama Toko</label>
 													<input type="text" name="name" class="form-control" value="<?= set_value('name') ?>">
 													<?= form_error('name') ?>
 												</div>
 
-												<div class="form-group">
+												<!-- select start -->
+												<div class="form-group mt-3">
+												<select class="custom-select form-control" name="kategori">
+												<option selected> -- Pilih Kategori --</option>
+													<?php 
+													
+$con = mysqli_connect("localhost","root","","db");
+													$query = mysqli_query($con, "SELECT * FROM kategori");
+													while ($row = mysqli_fetch_array($query)) {?>
+													
+													<option value="<?= $row['id'] ?>"><?= $row['nama'] ?></option>
+
+													<?php } ?>
+												</select>
+												<?= form_error('kategori') ?>
+												</div>
+												<!-- select end -->
+
+												<div class="form-group mt-3">
 													<label>Deskripsi</label>
 													<textarea class="form-control" name="desc" rows="6" placeholder=""><?= set_value('desc') ?></textarea>
 												</div>
@@ -58,7 +80,7 @@
 												</div>
 
 												<div class="form-group mt-2">
-													<label>Image</label>
+													<label>Foto Toko</label>
 													<input type="file" name="userfile">
 													<?= $this->session->userdata('errorUpload') ?>
 												</div>

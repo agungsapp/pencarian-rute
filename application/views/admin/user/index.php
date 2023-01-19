@@ -42,6 +42,7 @@
 												<thead>
 													<tr>
 														<th>Username</th>
+														<th>Rule</th>
 														<th>password</th>
 														<th>diinsert pada</th>
 														<th>aksi</th>

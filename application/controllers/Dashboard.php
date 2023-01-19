@@ -15,6 +15,8 @@ class Dashboard extends CI_Controller
 		header('Cache-Control: no-cache, must-revalidate, max-age=0');
 		header('Cache-Control: post-check=0, pre-check=0', false);
 		header('Pragma: no-cache');
+		$this->load->model('KategoriModel');
+		$this->load->model('NodeModel');
 		
 		if ($this->session->userdata('user') === null) {
 			redirect('login');
@@ -22,14 +24,23 @@ class Dashboard extends CI_Controller
 	}
 	public function index()
 	{
-		$this->load->model('NodeModel');
-		$this->load->model('GraphModel');
+		 
+		 $modelnya = $this->KategoriModel->getkat();
 		$data = array(
-			'title' => 'Beranda',
-			'countRS' => $this->NodeModel->countObject(),
-			'countSimpul' => $this->NodeModel->countSimpul(),
-			'countGraph' => $this->GraphModel->countGraph(),
+			'title' => 'Pilih Kategori Makanan Oleh - Oleh',
+			'dk' => $modelnya,
+
 		);
 		$this->load->view('admin/dashboard/index', $data);
+	}
+
+	public function detail($id) {
+		$data = array(
+			'title' => 'detail toko',
+			'objectRow' => $this->NodeModel->getById($id)
+
+		);
+		$this->load->view('admin/dashboard/detail', $data);
+
 	}
 }

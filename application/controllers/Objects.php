@@ -6,6 +6,8 @@ use Ozdemir\Datatables\DB\CodeigniterAdapter;
 
 class Objects extends CI_Controller
 {
+
+	protected $modelkat;
 	public function __construct()
 	{
 		parent::__construct();
@@ -14,6 +16,7 @@ class Objects extends CI_Controller
 		header('Pragma: no-cache');
 
 		$this->load->model('NodeModel');
+
 	}
 
 	/**
@@ -38,6 +41,7 @@ class Objects extends CI_Controller
 	{
 
 		$this->form_validation->set_rules('name', 'Nama Gunung', 'required', ['required' => '%s tidak boleh kosong ']);
+		$this->form_validation->set_rules('kategori', 'kategori', 'required', ['required' => '%s tidak boleh kosong ']);
 		$this->form_validation->set_rules('lat', 'Latitude', 'required', ['required' => '%s tidak boleh kosong ']);
 		$this->form_validation->set_rules('lng', 'Longitude', 'required', ['required' => '%s tidak boleh kosong ']);
 
@@ -59,8 +63,10 @@ class Objects extends CI_Controller
 			}
 		}
 
+
 		$data = array(
 			'title' => 'Gunung'
+
 		);
 		$this->load->view('admin/objects/add', $data);
 	}

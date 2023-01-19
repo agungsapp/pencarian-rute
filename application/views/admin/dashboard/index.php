@@ -27,53 +27,22 @@
 
 
 							<h3 class=""><strong><?= $title ?></strong></h3>
+							<?php //var_dump($dk) ?>
 						</div>
-						<div class="row">
-							<div class="col-lg-4">
+						<div class="row mt-5">
+							<!-- lop start -->
+							<?php  foreach ($dk as $d) : ?> 
+							<div class="col-lg-3 col-sm-3">
 								<div class="card">
+									<a href="admin/dashboard/detail/<?= $d['id']?>" style="height: 100px; border: 1px solid rgba(0,0,0,0.2);" class="btn btn-light shadow-sm">
 									<div class="card-body">
-										<div class="p-4">
-											<div class="d-flex justify-content-between">
-												<div>
-													<h5 class="text-muted">Total</h5>
-													<h4><strong>Petshop </strong></h4>
-												</div>
-												<h1 class=""><span class=""><?= $countRS ?></span> <span class="text-muted h3"></span></h1>
-											</div>
-										</div>
+									<h3><?= $d['nama'] ?></h3>
 									</div>
+									</a>
 								</div>
 							</div>
-							<div class="col-lg-4">
-								<div class="card">
-									<div class="card-body">
-										<div class="p-4">
-											<div class="d-flex justify-content-between">
-												<div>
-													<h5 class="text-muted">Total</h5>
-													<h4><strong>Simpul</strong></h4>
-												</div>
-												<h1 class=""><span class=""><?= $countSimpul ?></span> <span class="text-muted h3">Unit</span></h1>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="card">
-									<div class="card-body">
-										<div class="p-4">
-											<div class="d-flex justify-content-between">
-												<div>
-													<h5 class="text-muted">Total</h5>
-													<h4><strong>Graph</strong></h4>
-												</div>
-												<h1 class=""><span class=""><?= $countGraph ?></span> <span class="text-muted h3">Unit</span></h1>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							<?php endforeach ?>
+							<!-- loop end -->
 						</div>
 
 					</div>

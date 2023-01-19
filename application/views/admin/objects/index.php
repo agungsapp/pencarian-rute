@@ -27,15 +27,15 @@
 				<div class="container-fluid">
 					<div class="page-content-wrapper">
 						<div class="mt-3">
-							<h3 class=""><strong>Petshop </strong></h3>
+							<h3 class=""><strong>Toko Pie Pisang</strong></h3>
 						</div>
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="card">
 									<div class="card-body">
-										<a href="<?= site_url('admin/hotel/add') ?>" class="btn btn-primary mb-3">Tambah Titik Petshop</a>
+										<a href="<?= site_url('admin/hotel/add') ?>" class="btn btn-primary mb-3">Tambah Titik Toko Oleh-Oleh</a>
 										<div class="p-0 table-responsive">
-											<p>Berikut adalah data Petshop yang terdaftar.</p>
+											<p>Berikut adalah data Toko Pie Pisang yang terdaftar.</p>
 											<?= $this->session->flashdata('statusMessage') ?>
 											<hr />
 											<table id="datatable" class="table table-sm table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
