@@ -26,9 +26,9 @@
 							<h3 class=""><strong><?= $objectRow->name ?></strong></h3>
 						</div>
 						<div class="row">
-							<div class="col-12 col-sm-8">
+							<div class="col-12">
 								<div class="card">
-									<img class="card-img-top" style="height:400px;object-fit:cover;" src="<?= base_url('uploads/' . $objectRow->picture) ?>" alt="Card image cap">
+									<!-- <img class="card-img-top" style="height:400px;object-fit:cover;" src="<?= base_url('uploads/' . $objectRow->picture) ?>" alt="Card image cap"> -->
 								</div>
 								<div class="card">
 									<div class="card-body">
@@ -36,10 +36,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-12 col-sm-4">
+							<div class="col-12">
 								<div class="card">
-									<div class="card-body">
+									<div class="card-body d-flex justify-content-center flex-column">
 										<div id="map" style="height: 450px;width: 100%;"></div>
+										<a href="#" class="btn btn-primary mt-3">Lihat Rute</a>
 									</div>
 								</div>
 							</div>

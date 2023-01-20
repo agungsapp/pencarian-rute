@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 
@@ -47,19 +45,19 @@
 
 												<!-- select start -->
 												<div class="form-group mt-3">
-												<select class="custom-select form-control" name="kategori">
-												<option selected> -- Pilih Kategori --</option>
-													<?php 
-													
-$con = mysqli_connect("localhost","root","","db");
-													$query = mysqli_query($con, "SELECT * FROM kategori");
-													while ($row = mysqli_fetch_array($query)) {?>
-													
-													<option value="<?= $row['id'] ?>"><?= $row['nama'] ?></option>
+													<select class="custom-select form-control" name="kategori">
+														<option selected> -- Pilih Kategori --</option>
+														<?php
 
-													<?php } ?>
-												</select>
-												<?= form_error('kategori') ?>
+														$con = mysqli_connect("localhost", "root", "", "db_aswan");
+														$query = mysqli_query($con, "SELECT * FROM kategori");
+														while ($row = mysqli_fetch_array($query)) { ?>
+
+															<option value="<?= $row['id'] ?>"><?= $row['nama'] ?></option>
+
+														<?php } ?>
+													</select>
+													<?= form_error('kategori') ?>
 												</div>
 												<!-- select end -->
 

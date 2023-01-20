@@ -17,15 +17,14 @@ class Dashboard extends CI_Controller
 		header('Pragma: no-cache');
 		$this->load->model('KategoriModel');
 		$this->load->model('NodeModel');
-		
+
 		if ($this->session->userdata('user') === null) {
 			redirect('login');
 		}
 	}
 	public function index()
 	{
-		 
-		 $modelnya = $this->KategoriModel->getkat();
+		$modelnya = $this->KategoriModel->getkat();
 		$data = array(
 			'title' => 'Pilih Kategori Makanan Oleh - Oleh',
 			'dk' => $modelnya,
@@ -34,13 +33,13 @@ class Dashboard extends CI_Controller
 		$this->load->view('admin/dashboard/index', $data);
 	}
 
-	public function detail($id) {
+	public function detail($id)
+	{
 		$data = array(
 			'title' => 'detail toko',
-			'objectRow' => $this->NodeModel->getById($id)
-
+			'datok' => $this->NodeModel->geByKatID($id)
 		);
-		$this->load->view('admin/dashboard/detail', $data);
 
+		$this->load->view('admin/dashboard/detail', $data);
 	}
 }

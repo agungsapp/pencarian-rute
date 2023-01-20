@@ -27,20 +27,21 @@
 
 
 							<h3 class=""><strong><?= $title ?></strong></h3>
-							<?php //var_dump($dk) ?>
+							<?php //var_dump($dk) 
+							?>
 						</div>
 						<div class="row mt-5">
 							<!-- lop start -->
-							<?php  foreach ($dk as $d) : ?> 
-							<div class="col-lg-3 col-sm-3">
-								<div class="card">
-									<a href="admin/dashboard/detail/<?= $d['id']?>" style="height: 100px; border: 1px solid rgba(0,0,0,0.2);" class="btn btn-light shadow-sm">
-									<div class="card-body">
-									<h3><?= $d['nama'] ?></h3>
+							<?php foreach ($dk as $d) : ?>
+								<div class="col-lg-3 col-sm-3">
+									<div class="card">
+										<a href="dashboard/detail/<?= $d['id'] ?>" style="height: 100px; border: 1px solid rgba(0,0,0,0.2);" class="btn btn-light shadow-sm">
+											<div class="card-body">
+												<h3><?= $d['nama'] ?></h3>
+											</div>
+										</a>
 									</div>
-									</a>
 								</div>
-							</div>
 							<?php endforeach ?>
 							<!-- loop end -->
 						</div>

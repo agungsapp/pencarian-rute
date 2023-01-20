@@ -13,7 +13,7 @@
 
 
 		<?php $this->load->view('_parts/header') ?>
-		<?php $this->load->view('_parts/sidebar') var_dump($objectRow); ?>
+		<?php $this->load->view('_parts/sidebar') ?>
 
 		<!-- ============================================================== -->
 		<!-- Start right Content here -->
@@ -23,26 +23,21 @@
 				<div class="container-fluid">
 					<div class="page-content-wrapper">
 						<div class="mt-3">
-							<h3 class=""><strong><?= $objectRow->name ?></strong></h3>
+							<h3 class=""><strong>Toko yang tersedia</strong></h3>
 						</div>
 						<div class="row">
-							<div class="col-12 col-sm-8">
-								<div class="card">
-									<img class="card-img-top" style="height:400px;object-fit:cover;" src="<?= base_url('uploads/' . $objectRow->picture) ?>" alt="Card image cap">
-								</div>
-								<div class="card">
+							<?php foreach ($datok as $dt) : ?>
+								<div class="card ms-5 mt-5	" style="width: 18rem;">
+									<img src="<?= base_url('uploads/' . $dt['picture']) ?>" class="card-img-top" alt="...">
 									<div class="card-body">
-										<p class="card-text"><?= $objectRow->desc ?></p>
+										<h5 class="card-title"><?= $dt['name']; ?></h5>
+										<p class="card-text"><?= $dt['desc']; ?></p>
+									</div>
+									<div class="card-body">
+										<a href="<?= base_url(); ?>/hotel/detail/<?= $dt['id']; ?>" class="btn btn-primary">Lihat Toko</a>
 									</div>
 								</div>
-							</div>
-							<div class="col-12 col-sm-4">
-								<div class="card">
-									<div class="card-body">
-										<div id="map" style="height: 450px;width: 100%;"></div>
-									</div>
-								</div>
-							</div>
+							<?php endforeach ?>
 						</div>
 
 					</div>

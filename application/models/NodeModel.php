@@ -16,6 +16,14 @@ class NodeModel extends CI_Model
 		return $this->db->get_where($this->tb_, ['id' => $id])->row();
 	}
 
+	public function geByKatID($id)
+	{
+		// $query = $this->db->where('kategori', $id); // Produces: WHERE kategori = 'id'
+		// $hasil =  $query->result_array();
+		// return $hasil;
+		return $this->db->get_where($this->tb_, ['kategori' => $id])->result_array();
+	}
+
 	/**
 	 * add
 	 *
