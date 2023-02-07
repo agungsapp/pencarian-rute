@@ -4,26 +4,26 @@
 
 			<!-- LOGO -->
 			<div class="navbar-brand-box">
-				<a href="<?= site_url() ?>" class="logo logo-dark">
-				
+				<a href="<?= site_url() ?>" class="logo logo-dark d-flex">
+
 					<span class="logo-lg">
-						<img src="<?= base_url() ?>assets/maps.png" alt="" height="60">  
+						<img src="<?= base_url() ?>assets/maps.png" alt="" height="60">
 					</span>
 					<span class="logo-lg">
-						<img src="<?= base_url() ?>assets/djk.png" alt="" height="25">  
+						<img src="<?= base_url() ?>assets/images/floyd.png" alt="" height="20">
 					</span>
-					
+
 				</a>
 
 				<a href="<?= site_url() ?>" class="logo logo-light">
 					<span class="logo-sm">
-						<img src="<?= base_url() ?>assets/maps.png" alt="" height="70"> 
+						<img src="<?= base_url() ?>assets/maps.png" alt="" height="70">
 					</span>
 					<span class="logo-sm">
-						<img src="<?= base_url() ?>assets/maps.png" alt="" height="70"> 
+						<img src="<?= base_url() ?>assets/maps.png" alt="" height="70">
 					</span>
-					
-					
+
+
 				</a>
 			</div>
 
@@ -60,9 +60,9 @@
 						<i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
 					</button>
 					<div class="dropdown-menu dropdown-menu-end">
-					
+
 						<a class="dropdown-item d-block" href="#"><span class="badge badge-success float-end">11</span><i class="mdi mdi-cog-outline font-size-16 align-middle me-1"></i> Settings</a>
-						
+
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item text-danger" href="<?= site_url('logout') ?>"><i class="mdi mdi-power font-size-16 align-middle me-1 text-danger"></i> Logout</a>
 					</div>

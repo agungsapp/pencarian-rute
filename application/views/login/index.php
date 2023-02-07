@@ -23,7 +23,7 @@
 </head>
 
 
-<body class="bg-primary mt-5" >
+<body class="bg-primary mt-5">
 	<div class="home-center">
 		<div class="home-desc-center">
 
@@ -40,7 +40,7 @@
 											<img src="assets/maps.png" height="75" alt="logo">
 										</a>
 
-										<h5 class="text-primary mb-2 mt-4">Welcome Back Apk Djikstra  !</h5>
+										<h5 class="text-primary mb-2 mt-4">Welcome Back Pencarian Rute Floyd-Warshall !</h5>
 									</div>
 
 
