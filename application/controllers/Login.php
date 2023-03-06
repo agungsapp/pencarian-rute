@@ -14,7 +14,7 @@ class Login extends CI_Controller
 	}
 
 	/**
-	 * login
+	 * loginfloydwarshall
 	 * menampilkan halaman login
 	 * @return void
 	 */
@@ -24,7 +24,7 @@ class Login extends CI_Controller
 		$this->form_validation->set_rules('password', 'Password', 'trim|required', ['required' => 'Password tidak boleh kosong']);
 
 		if ($this->form_validation->run() == TRUE) {
-			$userRow = $this->UserModel->login();	
+			$userRow = $this->UserModel->login();
 			if (is_null($userRow)) {
 				$this->session->set_flashdata('loginError', alert('danger', '<strong>Maaf</strong>, username atau password anda salah, mohon ulangi sekali lagi !'));
 			} else if ($userRow->rule === 'admin') {
@@ -32,7 +32,7 @@ class Login extends CI_Controller
 				redirect('admin/dashboard');
 			} else {
 				$this->session->set_userdata('user', $userRow);
-				redirect('djikstra');
+				redirect('floydwarshall');
 			}
 		}
 

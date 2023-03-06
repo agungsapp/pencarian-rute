@@ -108,14 +108,14 @@ class Front extends CI_Controller
 	 * menampilkan halaman dashboard
 	 * @return void
 	 */
-	public function djikstra()
+	public function floydwarshall()
 	{
 		$data = array(
 			'title' => 'Pencarian Rute',
 			'nodeResult' => $this->NodeModel->getData()
 
 		);
-		$this->load->view('front/djikstra', $data);
+		$this->load->view('front/floydwarshall', $data);
 	}
 
 	/**
@@ -206,6 +206,4 @@ class Front extends CI_Controller
 		);
 		$this->load->view('front/about', $data);
 	}
-
-	
 }

@@ -39,7 +39,7 @@ $route['hotel'] = 'Front/hotel';
 $route['hotel/(:num)'] = 'Front/hotel/$1';
 $route['hotel/detail/(:num)'] = 'Front/detailHotel/$1';
 $route['galeri'] = 'Front/galeri';
-$route['djikstra'] = 'Front/djikstra';
+$route['floydwarshall'] = 'Front/floydwarshall';
 $route['djikstra2'] = 'Front/djikstra2';
 $route['about'] = 'Front/about';
 $route['pedoman'] = 'Front/pedoman';
@@ -49,6 +49,7 @@ $route['getMarker'] = 'Front/getAllMarker';
 // $route['test'] = 'Front/about';
 
 
+// $route['default_controller'] = 'Login/index';
 $route['default_controller'] = 'Login/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
